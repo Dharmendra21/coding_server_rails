@@ -1,0 +1,168 @@
+
+<!-- <script src="assets/plugins/pace/pace.min.js"></script> -->
+<div id="page-loader" class="fade in"><span class="spinner"></span></div>
+    <!-- end #page-loader -->
+    
+    <!-- begin #page-container -->
+    <div id="page-container" class="fade page-sidebar-fixed page-header-fixed page-with-wide-sidebar">
+     
+      <%= render "layouts/header" %>
+        <!-- end #header -->
+        <%= render "layouts/leftsidebar" %>
+        <!-- begin #content -->
+        <div id="content" class="content">
+            <!-- begin breadcrumb -->
+            <ol class="breadcrumb pull-right">
+                <li><a href="javascript:;">Home</a></li>
+                <li><a href="javascript:;">Page Options</a></li>
+                <!-- <li class="active">Page with Wide Sidebar</li> -->
+            </ol>
+            <!-- end breadcrumb -->
+            <!-- begin page-header -->
+            <!-- <h1 class="page-header">Page with Wide Sidebar <small>header small text goes here...</small></h1> -->
+            
+            <!-- end page-header -->
+            <div class="panel panel-inverse">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                       
+                    </div>
+                    <h4 class="panel-title">Create Country</h4>
+                </div>
+                
+<div class="panel-body">
+	<div class="user_details_wrp">
+		<div class="row">
+			<div class="col-sm-2 col-xs-12">
+			<div class="prfl_img">
+			    <%= image_tag @client.image_url%>
+	  	     
+	        </div>
+															
+		</div>
+		<div class="col-sm-4 col-xs-12">
+			<h3>Personal Details</h3>
+			<!-- <div class="form-group"><b>Name </b> <span>:</span> The Rock</div> -->
+			<div class="form-group"><b>First Name </b><span>:</span><%= @client.first_name%></div>
+			<div class="form-group"><b>Last Name </b><span>:</span><%= @client.last_name %></div>
+			<div class="form-group"><b>Email </b><span>:</span><%= @client.email%></div>
+			<div class="form-group"><b>Status</b><span>:</span><%= @client.status%></div>
+		</div>
+		<div class="col-sm-4 col-xs-12">
+			<h3>Contact Information</h3>
+		<div class="form-group"><b>Organization</b><span>:</span><%= @client.origanization %></div>
+
+							 								
+		<div class="form-group"><b>Mobile </b><span>:</span><%= @client.mobile_no %></div>
+		
+		<div class="form-group"><b>Address </b><span>:</span><%= @client.address %></div>
+	</div>
+	</div>
+	</div>
+	</div> 
+    </div>
+  </div>
+</div>
+
+                        
+
+
+        <!-- end #content -->
+          <!-- begin theme-panel -->
+        <div class="theme-panel">
+            <a href="javascript:;" data-click="theme-panel-expand" class="theme-collapse-btn"><i class="fa fa-cog"></i></a>
+            <div class="theme-panel-content">
+                <h5 class="m-t-0">Color Theme</h5>
+                <ul class="theme-list clearfix">
+                    <li class="active"><a href="javascript:;" class="bg-green" data-theme="default" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Default">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-red" data-theme="red" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Red">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-blue" data-theme="blue" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Blue">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-purple" data-theme="purple" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Purple">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-orange" data-theme="orange" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Orange">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-black" data-theme="black" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Black">&nbsp;</a></li>
+                </ul>
+                <div class="divider"></div>
+                <div class="row m-t-10">
+                    <div class="col-md-5 control-label double-line">Header Styling</div>
+                    <div class="col-md-7">
+                        <select name="header-styling" class="form-control input-sm">
+                            <option value="1">default</option>
+                            <option value="2">inverse</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-t-10">
+                    <div class="col-md-5 control-label">Header</div>
+                    <div class="col-md-7">
+                        <select name="header-fixed" class="form-control input-sm">
+                            <option value="1">fixed</option>
+                            <option value="2">default</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-t-10">
+                    <div class="col-md-5 control-label double-line">Sidebar Styling</div>
+                    <div class="col-md-7">
+                        <select name="sidebar-styling" class="form-control input-sm">
+                            <option value="1">default</option>
+                            <option value="2">grid</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-t-10">
+                    <div class="col-md-5 control-label">Sidebar</div>
+                    <div class="col-md-7">
+                        <select name="sidebar-fixed" class="form-control input-sm">
+                            <option value="1">fixed</option>
+                            <option value="2">default</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-t-10">
+                    <div class="col-md-5 control-label double-line">Sidebar Gradient</div>
+                    <div class="col-md-7">
+                        <select name="content-gradient" class="form-control input-sm">
+                            <option value="1">disabled</option>
+                            <option value="2">enabled</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-t-10">
+                    <div class="col-md-5 control-label double-line">Content Styling</div>
+                    <div class="col-md-7">
+                        <select name="content-styling" class="form-control input-sm">
+                            <option value="1">default</option>
+                            <option value="2">black</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-t-10">
+                    <div class="col-md-12">
+                        <a href="#" class="btn btn-inverse btn-block btn-sm" data-click="reset-local-storage"><i class="fa fa-refresh m-r-3"></i> Reset Local Storage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   <!-- begin scroll to top btn -->
+        <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+        <!-- end scroll to top btn -->
+    </div>  <!-- 
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script> -->
+<script>
+$(document).ready(function() {
+    App.init();
+    /*$('#new_country').validate({
+                debug: false,
+                errorElement: "span",
+                errorClass: "help-block",
+                rules: {
+                    "country[name]": {
+                        require_from_group: [1, ".contact-method"]
+                    }
+                }
+          });*/
+     
+});
+</script>
+

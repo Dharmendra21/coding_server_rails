@@ -1,0 +1,29 @@
+<div class="col-md-6">
+<%= link_to 'Back', root_path, class: "back" %>
+<table class="table table-bordered">
+  <thead>
+	  <tr>
+		<th>Sr no</th>
+		<th>Country</th>
+		<th>Status</th>
+		<th></th>
+		<th></th>
+	  </tr>
+	</thead>
+  <tbody>
+	  <%# @country.each do |country| %>
+	  <tr>
+	    <td><%#= index = index+1 %></td>
+	    <td><%= @country.name %></td>
+	    <td><%= @country.status %></td>
+	    <td><%= link_to 'Edit', edit_country_path(id: @country) %></td>
+	    <td><%= link_to 'Delete', country_path(id: @country), method: :delete, data: { confirm: 'Are you sure?'} %></td>
+	  <%# end %>
+	  </tr>
+  </tbody>
+</table>
+	</div>
+</div> 
+</div>
+</div>
+</div>

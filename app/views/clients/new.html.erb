@@ -1,0 +1,118 @@
+  <div id="content" class="content">
+          <ol class="breadcrumb pull-right">
+        <li><a href="javascript:;">Home</a></li>
+        <li><a href="javascript:;">Tables</a></li>
+        <li><a href="javascript:;">Managed Tables</a></li>
+        <li class="active">ColReorder</li>
+       </ol>
+        <div class="row">
+          
+          <div class="col-md-12">
+            <!-- end page-header -->
+            <div class="panel panel-inverse">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                      <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                      <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                      <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                      <!-- <i>fa fa-plus fa-fw<i> -->
+               
+                      <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                    <h4 class="panel-title">Add Contact</h4>
+                </div>
+                
+                <div class="panel-body">
+                    
+	                  <%= form_for @client, :url => {:action => "create"}, :html => {:"data-parsley-validate" => 'true'} do  |f| %>
+                  
+                      
+	                    <div class="col-md-6">
+											   <div class="form-group">
+											        <%= f.label :First_name %>
+											        <%= f.text_field :first_name, class: " form-control", "data-parsley-required" => 'true' %>
+											    </div>
+
+											    <div class="form-group">
+											        <%= f.label :Last_name %>
+											        <%= f.text_field :last_name, class: " form-control", "data-parsley-required" => 'true' %>
+											    </div>
+
+											    <div class="form-group">
+											        <%= f.label :Email %>
+											        <%= f.email_field :email, class: " form-control", "data-parsley-required" => 'true' %>
+											    </div>
+
+                        <!--   <div class="form-group">
+                            <%#= f.label :Status %>
+                           <%#= f.select(:status, options_for_select([['Active'], ['In-active']]), :prompt => "Select", class: "form-control") %>
+
+                          </div> -->
+
+											    <div class="form-group">
+											      <%= f.label :password %>
+											     <%= f.password_field  :password, class: " form-control", "data-parsley-required" => 'true' %>
+											    </div> 
+
+											    <div class="form-group">
+											      <%= f.label :Confirm_password %>
+											     <%= f.password_field  :password_confirmation, class: " form-control", "data-parsley-required" => 'true' %>
+											    </div>
+
+											  <div class="form-group">
+											    <%= f.label :Profile_image %>
+											    <%= f.file_field :image %>
+  											</div>
+
+                      <div class="form-group">
+                        <%= f.label :Active %>
+                        <%= f.check_box  :status, checked: "checked", "data-parsley-required" => "false" %>
+                      </div>
+
+											    <div class="form-group">
+											        <%= f.submit "Save", class: "btn btn-success" %>
+											        <%= link_to 'Cancel', clients_path, class:'btn btn-danger' %>
+											    </div>
+								</div>
+
+								<div class="col-md-6">
+      				    <div class="form-group">
+						        <%= f.label :Mobile_no %>
+						        <%= f.text_field :mobile_no, id: "mobile", class: " form-control", "data-parsley-required" => 'false' %>
+              
+                      <%= error_message_on(f.object, :mobile_no) %>
+						       </div>
+                        
+
+											    <div class="form-group">
+											        <%#= f.label :Address %>
+											        <%= f.text_field :address,
+											         id: "address", "data-parsley-required" => 'false', class: " form-control" %>
+                               <%= error_message_on(f.object, :address) %>
+											    </div>
+                         </div>
+
+											<% end %>
+                    </div>
+                </div> 
+              </div>
+          </div>
+    </div>
+         
+
+  <script src="/assets/jquery-ui.min.js"></script>
+  <script src="/assets/jquery.slimscroll.min.js"></script>
+ <script>
+    $(document).ready(function() {
+      App.init();
+     
+    });
+    google.maps.event.addDomListener(window, 'load', function () {
+    var places = new google.maps.places.Autocomplete(document.getElementById('address'));
+  });
+  $('#mobile').mask('(000) 000-0000');
+
+  </script>
+
+
+
